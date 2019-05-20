@@ -1,10 +1,21 @@
-int ciecle_d(int d,int e)
-{
-  static int a,b,c;
-  a++;
-  a%=(2*e-2*d);
-  b=2*e-2*d-a;
-  if(b>a)c=d+a;
-  else c=d+b;
-  return c; 
-}
+/*Using this function you can get a triangular wave */
+int wave_triangular(int d,int e)
+//The first value is minimum  and the second one is maxinum 
+  {
+    static int a,b,c;
+    a++;
+    a%=(2*e-2*d);
+    b=2*e-2*d-a;
+    if(b>a)c=d+a;
+    else c=d+b;
+    return c; 
+  }
+void main()
+  {
+    int wave;
+    while(1)
+      {
+        wave=wave_triangular(1000,2000);
+        delay(50);
+      }
+  }
