@@ -1,0 +1,10 @@
+int ciecle_d(int d,int e)
+{
+  static int a,b,c;
+  a++;
+  a%=(2*e-2*d);
+  b=2*e-2*d-a;
+  if(b>a)c=d+a;
+  else c=d+b;
+  return c; 
+}
